@@ -1,0 +1,35 @@
+{
+	
+"name": "CAPTCHA Security Inspector",
+	
+"description": "a tool for CAPTCHA devs for testing their CAPTCHAs",
+	
+"version": "1.3.2",
+	
+"manifest_version": 3,
+
+"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp4UjA+zgNvJvWkVa19ysojgBFilcJj646HLqoaggnRGGquw5yntpAIwbegtLoeVzaYozuCYeqUCvoxgbQX2ZezqNLRDTsY+cINA/LzPq7atFqiLRyf2nuzSBe2cjjms0FbsYD8XMhGDvB/t9xMWinWtIYobA/Tzoo7b5nPwEQOR6UEQRpm60rfx1uidRw1pI9zFFCKYpAWpGkYOCc+5U/OWFlibgl1EB5wgwmfn1DDAMiwZtXiNoSIibBPXQipK7IZVUEjgyVaOMT+5JtfJNZwuYHBl3exYr8SwXUGvuSyqInkUQEixiQo6ydwFh50w3NmUrEJp9j//gmJKPN/rWZQIDAQAB",
+	
+"background": {"service_worker": "background.js"},
+
+"content_scripts": 
+[{
+  "matches": ["https://*/*"],
+  "js": ["content.js"]
+}],
+
+"permissions": ["scripting", "activeTab"],
+
+"host_permissions": ["https://*/*", "http://*/*"],
+
+"web_accessible_resources": [{"resources": ["images/solve_image.png", "icons/icon32.png", "audio/tada.mp3"], "matches": ["https://*/*"]}],
+
+"icons": 
+{
+  "16": "icons/icon16.png",
+  "32": "icons/icon32.png",
+  "48": "icons/icon48.png",
+  "128": "icons/icon128.png"
+}
+	
+}
