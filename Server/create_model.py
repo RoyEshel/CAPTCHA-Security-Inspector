@@ -1,6 +1,6 @@
 import tensorflow as tf
-from keras.models import Sequential, load_model
-from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from matplotlib import pyplot as plt
 import numpy as np
 import random
